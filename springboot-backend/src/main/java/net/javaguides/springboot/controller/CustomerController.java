@@ -19,10 +19,12 @@ public class CustomerController {
 
     @GetMapping
     public List<Customer> getAllCustomers() {
+
         return customerRepository.findAll();
     }
     @PostMapping
     public Customer createCustomer(@RequestBody Customer customer) {
+
         return customerRepository.save(customer);
     }
 
