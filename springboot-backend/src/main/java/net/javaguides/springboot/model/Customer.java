@@ -6,15 +6,14 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import javax.persistence.*;
-import java.lang.reflect.GenericArrayType;
 
 @Getter
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
-@Table(name = "employee")
-public class Employee {
+@Table(name = "customer")
+public class Customer {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY

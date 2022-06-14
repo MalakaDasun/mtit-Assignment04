@@ -1,7 +1,7 @@
 package net.javaguides.springboot;
 
-import net.javaguides.springboot.model.Employee;
-import net.javaguides.springboot.repository.EmployeeRepository;
+import net.javaguides.springboot.model.Customer;
+import net.javaguides.springboot.repository.CustomerRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
@@ -15,20 +15,20 @@ public class SpringbootBackendApplication implements CommandLineRunner {
 	}
 
 	@Autowired
-	private EmployeeRepository employeeRepository;
+	private CustomerRepository customerRepository;
 	@Override
 	public void run(String... args) throws Exception {
 
-		Employee employee = new Employee();
-		employee.setFirstName("ramesh");
-		employee.setLastName("rama");
-		employee.setAge(25);
-		employeeRepository.save(employee);
+		Customer customer = new Customer();
+		customer.setFirstName("ramesh");
+		customer.setLastName("rama");
+		customer.setAge(25);
+		customerRepository.save(customer);
 
-		Employee employee1 = new Employee();
-		employee1.setFirstName("ramesh1");
-		employee1.setLastName("rama1");
-		employee1.setAge(255);
-		employeeRepository.save(employee1);
+		Customer customer1 = new Customer();
+		customer1.setFirstName("ramesh1");
+		customer1.setLastName("rama1");
+		customer1.setAge(255);
+		customerRepository.save(customer1);
 	}
 }
